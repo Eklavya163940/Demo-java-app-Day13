@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building the Java application...'
+                echo "Building the Java application on branch ${BRANCH_NAME}"
                 sh 'mvn clean package'
             }
         }
